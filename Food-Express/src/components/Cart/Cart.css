@@ -1,0 +1,242 @@
+.cart-page {
+    padding: 2rem 1rem;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+  }
+  
+  .cart-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  .cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .cart-header h1 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .clear-cart-btn {
+    background-color: #ff4d4f;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .clear-cart-btn:hover {
+    background-color: #e3342f;
+  }
+  
+  .cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    background-color: #fafafa;
+    border-radius: 12px;
+    padding: 1rem;
+    gap: 1rem;
+    animation: slideUp 0.5s ease forwards;
+  }
+  
+  .item-image img {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+  
+  .item-details {
+    flex: 2;
+  }
+  
+  .item-details h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #222;
+  }
+  
+  .item-restaurant {
+    font-size: 0.9rem;
+    color: #888;
+  }
+  
+  .item-price {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #444;
+  }
+  
+  .item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .quantity-btn {
+    background-color: #eee;
+    border: none;
+    border-radius: 6px;
+    padding: 0.3rem 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .quantity-btn:hover {
+    background-color: #ddd;
+  }
+  
+  .item-subtotal {
+    font-weight: bold;
+    color: #333;
+    margin-left: 1rem;
+  }
+  
+  .remove-item-btn {
+    background: none;
+    border: none;
+    color: #e3342f;
+    cursor: pointer;
+    margin-left: 1rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .remove-item-btn:hover {
+    transform: scale(1.2);
+  }
+  
+  .cart-summary {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ddd;
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+  }
+  
+  .summary-row.total {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-top: 1rem;
+  }
+  
+  .checkout-btn {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .checkout-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .empty-cart {
+    text-align: center;
+    padding: 4rem 1rem;
+    color: #666;
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  .empty-cart-icon {
+    margin-bottom: 1rem;
+    color: #aaa;
+    animation: bounce 1.5s infinite;
+  }
+  
+  .continue-shopping-btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .continue-shopping-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .cart-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .item-image img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .cart-summary {
+      font-size: 1rem;
+    }
+  
+    .checkout-btn {
+      font-size: 1rem;
+    }
+  }
+  
